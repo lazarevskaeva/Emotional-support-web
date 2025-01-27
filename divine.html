@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Divine Spark</title>
+    <link rel="shortcut icon" href="/imgsdivine/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="divine.css">
+</head>
+<body>
+    <!-- Sticky Navbar -->
+    <div class="navbar" id="navbar">
+        <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <ul>
+            <li><a href="#home">Почетна</a></li>
+            <li><a href="#about">За мене</a></li>
+            <li><a href="#mymission">Моја мисија</a></li>
+            <li><a href="#guidebook">Прирачник</a></li>
+            <li><a href="#appointment">Закажи термин</a></li>
+        </ul>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-nav">
+        <ul>
+            <li><a href="#home">Почетна</a></li>
+            <li><a href="#about">За мене</a></li>
+            <li><a href="#mymission">Моја мисија</a></li>
+            <li><a href="#guidebook">Прирачник</a></li>
+            <li><a href="#appointment">Закажи термин</a></li>
+        </ul>
+    </div>
+
+    <!-- Sections -->
+    <section id="home">
+        <div class="logo-video">
+            <video src="/imgsdivine/divinespark.mp4" autoplay loop muted playsinline>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-content">
+            <h1>За мене</h1>
+            <img src="/imgsdivine/ivanaphoto.png" alt="About Me">
+            <p>Јас сум Ивана Ангелковска, тренер за лична, емоционална и енергетска трансформација, посветена на помагање на луѓето да го откријат својот вистински потенцијал, да се ослободат од ограничувачките верувања и да создадат живот полн со радост, баланс и свесност. 
+                Мојата мисија е да ти помогнам да ги разбереш и управуваш твоите емоции, да ја подигнеш својата енергија и да ја трансформираш својата реалност преку длабока лична работа.</p>
+        </div>
+    </section>
+
+    <section id="mymission">
+        <div class="mymission-box">
+            <a href="#"><h2>✨</h2></a>
+            <p><p>Со моето искуство и интуитивен пристап, создавам индивидуализирани програми, работилници и предизвици кои поттикнуваат раст, самодоверба и целосно ослободување од внатрешните блокади.</p></p>
+        </div>
+        <div class="mymission-box">
+            <a href="#"><h2>✨</h2></a>
+            <p>Верувам дека секој човек има моќ да се трансформира и да создаде живот кој одговара на неговите најдлабоки желби.</p>
+        </div>
+        <div class="mymission-box">
+            <a href="#"><h2>✨</h2></a>
+            <p>Ако си подготвена за длабока лична трансформација и сакаш да започнеш патување кон посреќен и исполнет живот, ќе ми биде чест да те водам низ овој процес.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section with Centered Heading -->
+    <div class="contact-heading">
+      <h1>Контактирај ме и дозволи си да заблескаш!✨</h1>
+    </div>
+
+    <section id="guidebook">
+        <div class="guidebook">
+            <h2>Прирачник</h2>
+            <div class="guidebook-images">
+                <img src="imgsdivine/mockupprir.jpg" alt="mockup">
+                <img src="imgsdivine/priracnik.jpg" alt="guidebook">
+            </div>
+            <p>
+                Овој прирачник ќе ти помогне:
+                <ul>
+                    <li>Да изградиш емоционална издржливост</li>
+                    <li>Да знаеш како да бидеш пофлексибилна личност и што ќе ти донесе флексибилноста</li>
+                    <li>Како да се справиш со неуспех</li>
+                    <li>Добиваш 4 Mindfulness техники</li>
+                    <li>План за издржливост (кој треба да го пополниш и примениш додека се соочуваш со стресна ситуација)</li>
+                </ul>
+                И МНОГУ ДРУГИ ИНТЕРЕСНИ ИНФОРМАЦИИ И ФАКТИ
+            </p>
+        </div>
+
+         <!-- Payment Section -->
+<div class="payment-container">
+    <p class="euro">За само €8.00!</p>
+    <div class="payment-option">
+        <h3>Одбери метод на плаќање:</h3>
+
+        <!-- PayPal Button -->
+        <div id="paypal-button-container" class="payment-method">
+            <!-- The PayPal button will be rendered here -->
+        </div>
+
+        <!-- Visa Card Payment Form -->
+        <div id="visa-payment-form" class="payment-method" style="display:none;">
+            <form id="visaForm">
+                <h3>Pay with Card</h3>
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" placeholder="Card Number" required><br>
+
+                <label for="cardExpiry">Expiry Date (MM/YY):</label>
+                <input type="text" id="cardExpiry" placeholder="MM/YY" required><br>
+
+                <label for="cardCvc">CVC:</label>
+                <input type="text" id="cardCvc" placeholder="CVC" required><br>
+
+                <button type="submit">Плати</button>
+            </form>
+        </div>
+
+        <!-- Toggle between PayPal and Visa -->
+        <div class="payment-buttons">
+            <button onclick="togglePaymentMethod('paypal')">Pay with PayPal</button>
+            <button onclick="togglePaymentMethod('visa')">Pay with Visa</button>
+        </div>
+    </div>
+</div>
+</section>
+
+<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=EUR"></script>
+<script>
+// Render PayPal button
+paypal.Buttons({
+    createOrder: function(data, actions) {
+        return actions.order.create({
+            purchase_units: [{
+                amount: {
+                    value: '8.00' // The price of the ebook
+                }
+            }]
+        });
+    },
+    onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+            // Redirect user or show confirmation
+            alert('Payment Successful!');
+            window.location.href = 'thank-you.php'; // Redirect to a thank you page
+        });
+    }
+}).render('#paypal-button-container');
+</script>
+
+
+    <section id="appointment">
+        <h1>Закажи термин</h1>
+        <form class="booking-form">
+            <label for="name">Име и Презиме:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Е-маил:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="date">Префериран датум:</label>
+            <input type="date" id="date" name="date" required>
+    
+            <label for="time">Префериран час:</label>
+            <input type="time" id="time" name="time" required>
+    
+            <label for="service">Услуги:</label>
+            <select id="service" name="service" required>
+                <option value="free consultation">Бесплатна Консултација</option>
+                <option value="appointment">Сеанса</option>
+            </select>
+    
+            <button type="submit">ЗАКАЖИ</button>
+        </form>
+    </section>
+    
+    <!-- Instagram Icon -->
+    <div class="instagram-icon" onclick="window.open('https://www.instagram.com/ivana.angelkovska?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==')"></div>
+
+    <script src="divine.js"></script>
+</body>
+</html>
